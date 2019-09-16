@@ -14,6 +14,8 @@ from .pagination import userPageNumberPagination
 from .models import Ticket, user, Agent 
 from .serializers import TicketSerializer, userSerializer, AgentSerializer
 
+def home(request):  
+    return render(request,'msg.html',)
 
 class userList(generics.ListAPIView):
     queryset=user.objects.all()

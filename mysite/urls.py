@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from rest_framework.urlpatterns import format_suffix_patterns
 from ticket import views
+from ticket.views import home
 
 
 urlpatterns = [
@@ -27,4 +28,5 @@ urlpatterns = [
      path('ticket/<int:id>/', views.TicketDetails.as_view()),
     path('ticket/', views.TicketList.as_view()),
     path('agent/', views.AgentList.as_view()),
+    path('',home)
 ]
